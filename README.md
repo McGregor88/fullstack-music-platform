@@ -8,7 +8,7 @@ Fullstack music platform app. Nestjs on backend and React on frontend.
 $ npm install
 ```
 
-## Running the app (server)
+## Running the server
 
 ```bash
 # development

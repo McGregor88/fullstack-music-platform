@@ -47,14 +47,14 @@ const Create = () => {
                     <FileUpload 
                         label="Загрузите изображение"
                         setFile={setPicture} 
-                        accept="/image/*"
+                        accept="image/*"
                     />
                 }
                 {activeStep === 2 &&
                     <FileUpload 
                         label="Загрузите аудио"
                         setFile={setAudio} 
-                        accept="/audio/*"
+                        accept="audio/*"
                     />
                 }
             </StepWrapper>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Card, Container, Grid, Step, StepLabel, Stepper } from '@material-ui/core';
 
 interface StepWrapperProps {
@@ -7,7 +7,7 @@ interface StepWrapperProps {
 
 const steps = ['Информация о треке', 'Загрузить обложку', 'Загрузить трек'];
 
-const StepWrapper: React.FC<StepWrapperProps> = ({ activeStep, children }) => {
+const StepWrapper: FC<StepWrapperProps> = ({ activeStep, children }) => {
     return (
         <Container>
             <Stepper activeStep={activeStep}>

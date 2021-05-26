@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, ChangeEvent } from 'react';
 import { Grid, Button } from '@material-ui/core';
 
 interface FileUploadProps {
@@ -7,9 +7,9 @@ interface FileUploadProps {
     accept: string;
 }
 
-const FileUpload: React.FC<FileUploadProps> = ({ label, setFile, accept }) => {
+const FileUpload: FC<FileUploadProps> = ({ label, setFile, accept }) => {
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         setFile(e.target.files[0]);
     };
 

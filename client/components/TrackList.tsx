@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Box, Grid } from '@material-ui/core';
 
 import { ITrack } from '../types/track';
@@ -8,7 +8,7 @@ interface TrackListProps {
     tracks: ITrack[];
 }
 
-const TrackList: React.FC<TrackListProps> = ({ tracks }) => {
+const TrackList: FC<TrackListProps> = ({ tracks }) => {
     return (
         <Grid 
             container

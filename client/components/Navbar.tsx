@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import {
@@ -25,7 +25,7 @@ const menuItems = [
 ];
 
 export default function Navbar() {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     const router = useRouter();
 
     const handleDrawerOpen = () => {

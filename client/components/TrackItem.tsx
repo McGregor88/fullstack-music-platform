@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useRouter } from 'next/router';
 import { Card, Grid, IconButton } from '@material-ui/core';
 import { Delete, Pause, PlayArrow } from '@material-ui/icons';
@@ -11,7 +11,7 @@ interface TrackItemProps {
     active?: boolean;
 }
 
-const TrackItem: React.FC<TrackItemProps> = ({ track, active = false }) => {
+const TrackItem: FC<TrackItemProps> = ({ track, active = false }) => {
     const router = useRouter();
     
     return (

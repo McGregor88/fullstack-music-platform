@@ -5,6 +5,8 @@ import { Pause, PlayArrow, VolumeUp } from '@material-ui/icons';
 import { ITrack } from '../types/track';
 import styles from '../styles/Player.module.scss';
 import TrackProgress from './TrackProgress';
+import { useTypedSelector } from '../hooks/useTypedSelector';
+import { useActions } from '../hooks/useActions';
 
 const Player = () => {
 
@@ -18,13 +20,22 @@ const Player = () => {
         picture: 'http://localhost:5000/image/6704c041-c541-4081-88c9-561dcb3dcb99.jpg',
         comments: []
     };
-    const active = false;
+    const { pause, active, duration, currentTime, volume } = useTypedSelector(state => state.player);
+    const { playTrack, pauseTrack } = useActions();
+
+    const play = () => {
+        if (pause) {
+            playTrack();
+        } else {
+            pauseTrack();
+        }
+    };
 
     return (
         <div className={styles.player}>
             <IconButton 
                 sx={{ mr: 2.5 }}
-                onClick={e => e.stopPropagation()}
+                onClick={play}
             >
                 {active
                     ? <Pause />

@@ -21,7 +21,7 @@ const Index = () => {
     }
 
     return (
-        <MainLayout>
+        <MainLayout title="Список треков - музыкальная платформа">
             <Grid 
                 container
                 justifyContent="center"
